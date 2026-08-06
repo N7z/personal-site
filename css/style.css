@@ -1,6 +1,7 @@
 * {
   margin: 0;
   padding: 0;
+  font-family: serif;
 }
 
 body {
@@ -67,7 +68,7 @@ img.eclipse {
   float: right;
 }
 
-span.subtitle {
+p.subtitle {
   font-size: 1.3rem;
 }
 
