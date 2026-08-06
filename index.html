@@ -95,10 +95,11 @@
 
           <p class="subtitle">Playing now</p>
 
-          <img
-            src="https://www.ballix.net/whatsplaying/widget?user=zPaulinBRz"
-            alt="last fm embed"
-          />
+          <div class="now-playing" id="now-playing">
+            <img id="np-cover" src="" alt="album cover" hidden />
+            <p id="np-track">loading..</p>
+            <p id="np-artist"></p>
+          </div>
         </aside>
       </div>
 
@@ -123,5 +124,21 @@
         <p class="center">paulo &copy; 2026 - All rights reserved.</p>
       </footer>
     </div>
+
+    <script>
+      fetch("https://www.ballix.net/whatsplaying/now?user=zPaulinBRz")
+        .then((res) => res.json())
+        .then((track) => {
+          const cover = document.getElementById("np-cover");
+          cover.src = track.image.large;
+          cover.hidden = false;
+          document.getElementById("np-track").innerHTML =
+            `<a class="link" href="${track.url}">${track.name}</a>`;
+          document.getElementById("np-artist").textContent = track.artist;
+        })
+        .catch(() => {
+          document.getElementById("np-track").textContent = "nothing playing";
+        });
+    </script>
   </body>
 </html>

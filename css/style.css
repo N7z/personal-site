@@ -43,6 +43,15 @@ body {
   padding-left: 1rem;
 }
 
+.sidebar ul,
+.sidebar .now-playing {
+  margin-left: 0;
+}
+
+.sidebar p.subtitle {
+  margin: 10px 0;
+}
+
 hr {
   border: 1px solid #1e8fd5;
 }
@@ -107,11 +116,6 @@ img.eclipse {
 
 p.subtitle {
   font-size: 1.3rem;
-  margin: 10px;
-}
-
-aside p.subtitle {
-  margin-left: 0;
 }
 
 footer {
@@ -121,6 +125,19 @@ footer {
 
 footer p {
   margin: 10px;
+}
+
+.now-playing {
+  margin: 10px;
+}
+
+.now-playing img {
+  width: 120px;
+  border: 1px solid #1e8fd5;
+}
+
+.now-playing p {
+  margin: 4px 0;
 }
 
 .center {
