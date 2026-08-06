@@ -11,7 +11,7 @@ Access live website in https://zpaulin.com.
 - Really cool Y2K aesthetic (early 2000's);
 - Stamps, blinkies and gifs everywhere.
 
-<img width="1202" height="880" alt="image" src="https://github.com/user-attachments/assets/13bed227-15ae-4e78-81f5-0c0cb465cf3e" />
+<img width="1204" height="849" alt="image" src="https://github.com/user-attachments/assets/1b66bb16-83fc-4e45-aced-15ac917d461b" />
 
 <br><br>
 
