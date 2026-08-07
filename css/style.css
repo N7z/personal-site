@@ -74,7 +74,7 @@ hr {
 
 .full-width {
   height: 7px;
-  margin: 25px -1rem 25px 0;
+  margin: 25px 0;
   background: url("../img/glitterblue.gif") repeat-x;
 }
 
@@ -97,6 +97,14 @@ ul.navbar li {
 
 ul.navbar li a {
   padding: 10px;
+}
+
+img.nav-icon {
+  width: 16px;
+  height: 16px;
+  margin-right: 5px;
+  vertical-align: text-bottom;
+  image-rendering: pixelated;
 }
 
 a {
@@ -126,7 +134,7 @@ section p {
 }
 
 img.eclipse {
-  width: 300px;
+  width: 340px;
   margin: 10px;
   margin-left: 20px;
   float: right;
