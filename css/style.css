@@ -198,6 +198,12 @@ img.hyprimage {
   vertical-align: middle;
 }
 
+img.bandeira {
+  display: block;
+  width: 250px;
+  margin: 15px;
+}
+
 a.image-link {
   text-decoration: none;
 }
