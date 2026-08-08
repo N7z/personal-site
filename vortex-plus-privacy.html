@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Vortex Plus - Privacy Policy</title>
+<style>
+  :root { color-scheme: dark; }
+  body {
+    max-width: 640px;
+    margin: 0 auto;
+    padding: 3rem 1.5rem 4rem;
+    background: #0b0b12;
+    color: #e5e5ea;
+    font: 16px/1.6 system-ui, -apple-system, sans-serif;
+  }
+  h1 { font-size: 1.75rem; margin: 0 0 0.25rem; }
+  h2 { font-size: 1.125rem; margin: 2rem 0 0.5rem; }
+  .date { color: #8a8a9c; font-size: 0.875rem; margin-bottom: 2rem; }
+  p, li { color: #d0d0da; }
+  ul { padding-left: 1.25rem; }
+  code {
+    padding: 0.1em 0.35em;
+    border-radius: 4px;
+    background: #1e1e29;
+    font-size: 0.875em;
+  }
+  a { color: #a78bfa; }
+  footer {
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid #1e1e29;
+    color: #8a8a9c;
+    font-size: 0.875rem;
+  }
+</style>
+</head>
+<body>
+
+<h1>Vortex Plus - Privacy Policy</h1>
+<p class="date">Last updated 3 August 2026</p>
+
+<h2>What is collected</h2>
+<p>
+  Nothing. Vortex Plus does not collect, transmit, sell or share any user data.
+  It has no analytics, no tracking, no remote servers and no third party
+  services.
+</p>
+
+<h2>What is stored, and where</h2>
+<p>Two things, both kept by the browser through the <code>chrome.storage</code> API:</p>
+<ul>
+  <li><strong>Feature toggles</strong> - which features you turned on or off, in
+    <code>chrome.storage.sync</code>, so they follow your Chrome profile.</li>
+  <li><strong>Saved looks</strong> - the outfits you explicitly choose to save, in
+    <code>chrome.storage.local</code>, on your device only.</li>
+</ul>
+<p>Neither ever leaves your browser. Uninstalling the extension removes both.</p>
+
+<h2>Network requests</h2>
+<p>
+  Vortex Plus runs only on <code>playvortex.io</code> and only talks to
+  <code>playvortex.io</code>, using the session you are already signed in with.
+  It reads pages such as the catalog and player profiles to display its own UI,
+  and it changes your outfit when you ask it to, for example by pressing "Copy
+  outfit" or saving a look. No request is made to any other domain.
+</p>
+
+<h2>Permissions</h2>
+<ul>
+  <li><code>storage</code> - to keep the two items listed above.</li>
+  <li>Host access to <code>playvortex.io</code> and its subdomains - to add the
+    interface and to call the site's own endpoints on your behalf.</li>
+</ul>
+
+<h2>Contact</h2>
+<p>Questions about this policy: <a href="mailto:contact@zpaulin.com">contact@zpaulin.com</a></p>
+
+<footer>
+  Vortex Plus is unofficial and is not affiliated with or endorsed by the Vortex
+  developers.
+</footer>
+
+</body>
+</html>
