@@ -85,7 +85,12 @@ body {
 
   padding: 3%;
 
-  section.articles {
+  section + section {
+    margin-top: 25px;
+  }
+
+  section.articles,
+  section.projects {
     .article_container {
       margin-top: 5px;
       display: grid;
