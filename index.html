@@ -3,165 +3,52 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>paulo</title>
-    <link href="css/style.css" rel="stylesheet" />
-    <link rel="icon" type="image/gif" href="./img/laptop.gif" />
+    <title>Paulo Junior</title>
+    <meta name="description" content="Paulo Junior - full-stack web developer, sysadmin and blue team analyst." />
+    <link href="/css/style.css" rel="stylesheet" />
+    <link rel="icon" type="image/gif" href="/img/laptop.gif" />
   </head>
   <body>
     <div class="container">
-      <div class="top-bar">
-        <img src="./img/PAULO.gif" alt="banner do portal web" />
-      </div>
+      <header class="top-bar">
+        <img class="pfp" src="https://avatars.githubusercontent.com/u/73448096?v=4" alt="profile picture" />
+        <div class="intro">
+          <h1>Paulo Junior</h1>
+          <p>Full-Stack Web Developer | SysAdmin | BlueTeam Analyst</p>
+          <div class="socials">
+            <a href="https://github.com/N7z" target="_blank">GitHub</a>
+            <a href="https://dev-null.sh/@N7z" target="_blank">/dev/null</a>
+          </div>
+        </div>
+      </header>
 
-      <ul class="navbar">
-        <li>
-          <a class="link active" href="index.html">
-            <img class="nav-icon" src="./img/icons/building16.gif" alt="computer" />
-            > Index <
-          </a>
-        </li>
-        <li>
-          <a class="link" href="projects.html">
-            <img class="nav-icon" src="./img/icons/disc7.gif" alt="disc" />
-            Projects
-          </a>
-        </li>
-        <li>
-          <a class="link" href="setup.html">
-            <img class="nav-icon" src="./img/icons/laptop.gif" alt="laptop" />
-            Setup
-          </a>
-        </li>
-        <li>
-          <a class="link" href="blog.html">
-            <img class="nav-icon" src="./img/icons/merry7.gif" alt="merry" />
-            Blog
-          </a>
-        </li>
-        <li>
-          <a class="link" href="about_me.html">
-            <img class="nav-icon" src="./img/icons/book.gif" alt="book" />
-            About Me
-          </a>
-        </li>
-      </ul>
-
-      <hr />
-
-      <div class="content">
-        <section>
-          <img class="eclipse" src="./img/eclipse_nfs.gif" alt="foto de um eclipse" />
-
-          <p class="subtitle">
-            <img class="welcome" src="./img/demo/Welcome.gif" alt="Welcome to my site.." />
-          </p>
-
-          <p>I'm Paulo, a web developer with 3 years of experience.</p>
-
-          <p>Currently working with PHP + Laravel on multi-tenant web systems.</p>
-
-          <p>I enjoy learning new stuff on my free-time, anything.</p>
-
-          <p>
-            Right now I'm cooking a secret project, a social thing.. more about it soon
-            <em>(shhh)</em>
-          </p>
-
-          <img class="bandeira" src="./img/missao.jpg" />
-
-          <p class="subtitle">
-            <img class="section-icon" src="./img/icons/computer4.gif" alt="computer" />
-            My stack:
-          </p>
-
-          <ul>
-            <li>- Web Development (PHP / JavaScript / Java)</li>            <li>- Game Development (Luau and C#)</li>
-          </ul>
-
-          <p class="subtitle">
-            <img class="section-icon" src="./img/icons/world.gif" alt="world" />
-            Languages I speak:
-          </p>
-
-          <ul>
-            <li>
-              <img class="flag" src="./img/flags/brazil.png" alt="brazil flag" />
-              portuguese (native)
-            </li>
-            <li>
-              <img class="flag" src="./img/flags/usa.png" alt="usa flag" />
-              english (c2)
-            </li>
-            <li>
-              <img class="flag" src="./img/flags/finland.png" alt="finland flag" />
-              finnish (a2)
-            </li>
-          </ul>
-
-          <p class="cat-line">
-            <img src="./img/cat3.png" />
-            <a href="about_me.html">To see more about me click here</a>
-          </p>
-
-          <div class="full-width"></div>
-
-          <div class="stamps">
-            <img class="stamp" src="./img/stamps/bringbackoldtech.png" alt="bringbackoldtech stamp" />
-            <img class="stamp" src="./img/stamps/iloverats.png" alt="iloverats stamp" />
-            <img class="stamp" src="./img/stamps/ilovemycomputer.png" alt="ilovemycomputer stamp" />
-            <img class="stamp" src="./img/stamps/twilight.gif" alt="mlp stamp" />
-            <img class="stamp" src="./img/stamps/bad_apple.gif" alt="bad_apple stamp" />
-            <img class="stamp" src="./img/stamps/miku.gif" alt="miku stamp" />
-            <img class="stamp" src="./img/stamps/lover.png" alt="lover stamp" />
-            <img class="stamp" src="./img/stamps/iloveoldweb.png" alt="iloveoldweb stamp" />
-            <img class="stamp" src="./img/stamps/iplayvortex.png" alt="iplayvortex stamp" />
+      <main class="content">
+        <section class="articles">
+          <h2>Articles</h2>
+          <div class="article_container">
+            <article>
+              <h3><a href="/articles/1.html">How I survived php2shell</a></h3>
+              <small>created at: 2026-10-22</small>
+              <p>
+                I am in charge of maintaining ~12 servers with about 500 clients,
+                <em>at least half of them running on deprecated PHP versions...</em>
+              </p>
+            </article>
           </div>
         </section>
-
-        <aside class="sidebar">
-          <p class="subtitle">Visitors</p>
-
-          <a href="https://www.hitwebcounter.com/split-pdf" target="_blank" rel="noopener" title="Split PDF File Tool">
-            <img
-              src="https://www.hitwebcounter.com/counter/counter.php?page=21513551&amp;style=0010&amp;nbdigits=5&amp;type=page"
-              alt="Split PDF File Tool"
-              decoding="async"
-              style="border: 0; max-width: 100%; height: auto"
-            />
-          </a>
-          <br />
-
-          <p class="subtitle">Playing now</p>
-
-          <div class="now-playing" id="now-playing">
-            <img id="np-cover" src="" alt="album cover" hidden />
-            <p id="np-track">loading..</p>
-            <p id="np-artist"></p>
-          </div>
-
-          <div class="badges">
-            <img src="./img/badges/phprendered.gif" alt="php badge" />
-            <img src="./img/badges/anime.gif" alt="anime badge" />
-            <img src="./img/badges/badgevirgo.gif" alt="virgo badge" />
-            <img src="./img/badges/flagbrasil.gif" alt="brasil badge" />
-          </div>
-        </aside>
-      </div>
+      </main>
 
       <footer>
-        <div class="buttons">
-          <a href="https://neocities.org/" target="_blank" rel="noreferrer">
-            <img src="./img/buttons/neocities.gif" alt="neocities button" />
-          </a>
-          <a href="https://www.mozilla.org/firefox/" target="_blank" rel="noreferrer">
-            <img src="./img/buttons/1firefox3.gif" alt="firefox button" />
-          </a>
-          <a href="https://validator.w3.org/" target="_blank" rel="noreferrer">
-            <img src="./img/buttons/1html.gif" alt="html button" />
-          </a>
-        </div>
+        <aside class="now-playing" id="now-playing" aria-live="polite">
+          <img id="np-cover" alt="album cover" hidden />
+          <div class="np-info">
+            <span id="np-label" class="np-label">Playing now</span>
+            <a id="np-track" class="np-track" target="_blank" rel="noopener">loading..</a>
+            <span id="np-artist" class="np-artist"></span>
+          </div>
+        </aside>
 
-        <p class="center">paulo &copy; 2008 - All rights reserved.</p>
+        <p>Paulo Junior &copy; 2026 - All rights reserved.</p>
       </footer>
     </div>
 
@@ -169,10 +56,17 @@
       fetch("https://www.ballix.net/whatsplaying/now?user=zPaulinBRz")
         .then((res) => res.json())
         .then((track) => {
-          const cover = document.getElementById("np-cover");
-          cover.src = track.image.large;
-          cover.hidden = false;
-          document.getElementById("np-track").innerHTML = `<a class="link" href="${track.url}">${track.name}</a>`;
+          if (track.nowplaying !== "true") {
+            document.getElementById("np-label").textContent = "Last played";
+          }
+          if (track.image?.large) {
+            const cover = document.getElementById("np-cover");
+            cover.src = track.image.large;
+            cover.hidden = false;
+          }
+          const link = document.getElementById("np-track");
+          link.textContent = track.name;
+          link.href = track.url;
           document.getElementById("np-artist").textContent = track.artist;
         })
         .catch(() => {

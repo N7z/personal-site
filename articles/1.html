@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>How I survived php2shell - Paulo Junior</title>
+    <meta
+      name="description"
+      content="Keeping ~12 servers and 500 clients on deprecated PHP versions safe during the php2shell CVEs."
+    />
+    <link href="/css/style.css" rel="stylesheet" />
+    <link rel="icon" type="image/gif" href="/img/laptop.gif" />
+  </head>
+  <body>
+    <div class="container">
+      <header class="top-bar">
+        <img
+          class="pfp"
+          src="https://avatars.githubusercontent.com/u/73448096?v=4"
+          alt="Paulo Junior profile picture"
+        />
+        <div class="intro">
+          <h1>Paulo Junior</h1>
+          <p>Full-Stack Web Developer | SysAdmin | BlueTeam Analyst</p>
+          <div class="socials">
+            <a href="https://github.com/N7z" target="_blank">GitHub</a>
+            <a href="https://dev-null.sh/@N7z" target="_blank">/dev/null</a>
+          </div>
+        </div>
+      </header>
+
+      <main class="content">
+        <a class="back-link" href="/">&larr; go back</a>
+
+        <article class="post">
+          <h3>How I survived php2shell</h3>
+          <small>created at: 2026-10-22</small>
+
+          <p class="greentext">
+            &gt; be any php developer<br />
+            &gt; wake up<br />
+            &gt; check phone<br />
+            &gt; panic
+          </p>
+
+          <p>
+            I am in charge of maintaining ~12 servers with just about 500 clients,
+            <em>at least half of them running on deprecated PHP versions</em>
+            from CloudLinux's PHP packages.
+          </p>
+
+          <p>
+            When I heard about the CVEs, the first thing I did was check if there was already a patch (there wasn't,
+            until 11am GMT-3). Then I proceeded to check if my firewall provider, Imunify360, had shipped any WAF
+            rules against it. Surprisingly, they had! I updated the firewall and some parameters in php.ini, restarted
+            everything and hoped for the best.
+          </p>
+
+          <p>
+            Then 11am came and I checked for the new packages... there were none. The only quick releases were for PHP
+            8.2+ by the official team, and the backports by Surý were no help to me on another provider.
+          </p>
+
+          <p>
+            I spent the entire day keeping an eye out for exploitation attempts, and the number at the end of the day
+            was higher than I expected: <em>40+ attempts on different websites</em>, 100% of which were blocked by
+            Imunify before even reaching PHP.
+          </p>
+
+          <p>
+            Later that night CloudLinux released backports for all versions from 5.6 onwards. That still sent me a very
+            clear message: we NEED to upgrade our websites. PHP 5, 7 and 8.1 are all in the past and need to go
+            extinct. Every day that passes is a new risk waiting to be discovered, and with AI and machine learning,
+            that risk is only going to increase.
+          </p>
+
+          <p>
+            That's why I made the decision to <em>actually</em> deprecate EOL PHP versions: no new websites are
+            accepted on them, and old ones are being prompted to migrate to newer versions. It makes me scared to think
+            about how many systems out there are not on patched PHP versions, and never will be.
+          </p>
+
+          <p>&mdash; Paulo</p>
+        </article>
+      </main>
+
+      <footer>
+        <aside class="now-playing" id="now-playing" aria-live="polite">
+          <img id="np-cover" alt="album cover" hidden />
+          <div class="np-info">
+            <span id="np-label" class="np-label">Playing now</span>
+            <a id="np-track" class="np-track" target="_blank" rel="noopener">loading..</a>
+            <span id="np-artist" class="np-artist"></span>
+          </div>
+        </aside>
+
+        <p>Paulo Junior &copy; 2026 - All rights reserved.</p>
+      </footer>
+    </div>
+
+    <script>
+      fetch("https://www.ballix.net/whatsplaying/now?user=zPaulinBRz")
+        .then((res) => res.json())
+        .then((track) => {
+          if (track.nowplaying !== "true") {
+            document.getElementById("np-label").textContent = "Last played";
+          }
+          if (track.image?.large) {
+            const cover = document.getElementById("np-cover");
+            cover.src = track.image.large;
+            cover.hidden = false;
+          }
+          const link = document.getElementById("np-track");
+          link.textContent = track.name;
+          link.href = track.url;
+          document.getElementById("np-artist").textContent = track.artist;
+        })
+        .catch(() => {
+          document.getElementById("np-track").textContent = "nothing playing";
+        });
+    </script>
+  </body>
+</html>
